@@ -65,3 +65,16 @@ Open `index.html` in browser.
 - Gamification badges
 - Leaderboard
 - AI-based personalized learning
+## Screenshots
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Quiz Module
+![Quiz Page](screenshots/quiz.png)
+
+### Score Tracking
+![Score Page](screenshots/score.png)
