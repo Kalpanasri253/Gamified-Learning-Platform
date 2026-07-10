@@ -1,0 +1,22 @@
+# Java compiled files
+*.class
+
+# Maven build files
+target/
+*.jar
+*.war
+
+# Spring Boot logs
+*.log
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
