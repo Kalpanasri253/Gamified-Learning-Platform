@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2>🎓 Gamified Learning Platform</h2>
+
+    <div class="menu">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="students.html">Students</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="questions.html">Questions</a>
+        <a href="scores.html">Scores</a>
+        <a href="index.html">Logout</a>
+    </div>
+</nav>
+<h1>Quiz Management</h1>
+
+<div class="container">
+
+<div class="card">
+
+<input type="hidden" id="id">
+
+<input type="text" id="subject" placeholder="Subject">
+
+<input type="text" id="title" placeholder="Quiz Title">
+
+<input type="number" id="totalMarks" placeholder="Total Marks">
+
+<br><br>
+
+<button onclick="saveQuiz()">💾 Save Quiz</button>
+
+<a href="dashboard.html">
+<button type="button">🏠 Dashboard</button>
+</a>
+
+</div>
+
+</div>
+
+<br>
+
+<center>
+
+<input type="text"
+id="search"
+placeholder="🔍 Search Quiz..."
+onkeyup="searchQuiz()"
+style="width:350px;">
+
+</center>
+
+<br>
+
+<table id="quizTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Subject</th>
+<th>Title</th>
+<th>Total Marks</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+<script src="js/quizzes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <h2>🎓 Gamified Learning Platform</h2>
+
+    <div class="menu">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="students.html">Students</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="questions.html">Questions</a>
+        <a href="scores.html">Scores</a>
+        <a href="index.html">Logout</a>
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <h1>Welcome Admin 👋</h1>
+
+    <p>
+        Manage Students, Teachers, Quizzes, Questions and Scores from one dashboard.
+    </p>
+
+</section>
+
+<h1>Admin Dashboard</h1>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>👨‍🎓 Students</h2>
+
+        <h1 id="studentCount">0</h1>
+
+        <p>Total Registered Students</p>
+
+        <br>
+
+        <button onclick="location.href='students.html'">
+
+            Manage
+
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>👩‍🏫 Teachers</h2>
+
+        <h1 id="teacherCount">0</h1>
+
+        <p>Total Teachers</p>
+
+        <br>
+
+        <button onclick="location.href='teachers.html'">
+
+            Manage
+
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>📝 Quizzes</h2>
+
+        <h1 id="quizCount">0</h1>
+
+        <p>Total Quizzes</p>
+
+        <br>
+
+        <button onclick="location.href='quizzes.html'">
+
+            Manage
+
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>❓ Questions</h2>
+
+        <h1 id="questionCount">0</h1>
+
+        <p>Total Questions</p>
+
+        <br>
+
+        <button onclick="location.href='questions.html'">
+
+            Manage
+
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🏆 Scores</h2>
+
+        <h1 id="scoreCount">0</h1>
+
+        <p>Student Results</p>
+
+        <br>
+
+        <button onclick="location.href='scores.html'">
+
+            Manage
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+fetch("http://localhost:8080/students")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("studentCount").innerHTML = data.length;
+});
+
+fetch("http://localhost:8080/teachers")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("teacherCount").innerHTML = data.length;
+});
+
+fetch("http://localhost:8080/quizzes")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("quizCount").innerHTML = data.length;
+});
+
+fetch("http://localhost:8080/questions")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("questionCount").innerHTML = data.length;
+});
+
+fetch("http://localhost:8080/scores")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("scoreCount").innerHTML = data.length;
+});
+
+</script>
+
+</body>
+
+</html>

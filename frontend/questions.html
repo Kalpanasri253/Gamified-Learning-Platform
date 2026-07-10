@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2>🎓 Gamified Learning Platform</h2>
+
+    <div class="menu">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="students.html">Students</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="questions.html">Questions</a>
+        <a href="scores.html">Scores</a>
+        <a href="index.html">Logout</a>
+    </div>
+</nav>
+<h1>Question Management</h1>
+
+<div class="container">
+
+<div class="card">
+
+<input type="hidden" id="id">
+
+<input type="number" id="quizId" placeholder="Quiz ID">
+
+<input type="text" id="questionText" placeholder="Question">
+
+<input type="text" id="optionA" placeholder="Option A">
+
+<input type="text" id="optionB" placeholder="Option B">
+
+<input type="text" id="optionC" placeholder="Option C">
+
+<input type="text" id="optionD" placeholder="Option D">
+
+<input type="text" id="correctAnswer" placeholder="Correct Answer">
+
+<br><br>
+
+<button onclick="saveQuestion()">💾 Save Question</button>
+
+<a href="dashboard.html">
+    <button type="button">🏠 Dashboard</button>
+</a>
+
+</div>
+
+</div>
+
+<br>
+
+<center>
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Search Question..."
+onkeyup="searchQuestion()"
+style="width:350px;">
+
+</center>
+
+<br>
+
+<table id="questionTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Quiz ID</th>
+<th>Question</th>
+<th>Option A</th>
+<th>Option B</th>
+<th>Option C</th>
+<th>Option D</th>
+<th>Correct Answer</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+<script src="js/questions.js"></script>
+
+</body>
+</html>

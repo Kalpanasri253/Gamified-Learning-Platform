@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.login-container{
+
+width:400px;
+
+margin:100px auto;
+
+background:white;
+
+padding:30px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+text-align:center;
+
+}
+
+.login-container h2{
+
+margin-bottom:20px;
+
+color:#2c3e50;
+
+}
+
+.login-container input{
+
+width:100%;
+
+padding:12px;
+
+margin:10px 0;
+
+}
+
+.login-container button{
+
+width:100%;
+
+padding:12px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+🎓 Gamified Learning Platform
+
+</header>
+
+<div class="login-container">
+
+<h2>Admin Login</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+</div>
+
+<script>
+
+function login(){
+
+let username=document.getElementById("username").value;
+
+let password=document.getElementById("password").value;
+
+if(username==="admin" && password==="admin123"){
+
+window.location.href="dashboard.html";
+
+}
+
+else{
+
+alert("Invalid Username or Password");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

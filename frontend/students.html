@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2>🎓 Gamified Learning Platform</h2>
+
+    <div class="menu">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="students.html">Students</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="questions.html">Questions</a>
+        <a href="scores.html">Scores</a>
+        <a href="index.html">Logout</a>
+    </div>
+</nav>
+
+<h1>Student Management</h1>
+
+<div class="container">
+
+<div class="card">
+
+<input type="hidden" id="id">
+
+<input type="text" id="name" placeholder="Student Name">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="text" id="village" placeholder="Village">
+
+<input type="number" id="score" placeholder="Score">
+
+<br><br>
+
+<button onclick="saveStudent()">💾 Save Student</button>
+
+<a href="dashboard.html">
+<button type="button">🏠 Dashboard</button>
+</a>
+
+</div>
+
+</div>
+
+<br>
+
+<center>
+
+<input type="text" id="search" placeholder="🔍 Search Student..." onkeyup="searchStudent()" style="width:350px;">
+
+</center>
+
+<br>
+
+<table id="studentTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Village</th>
+
+<th>Score</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+<script src="js/students.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+### Add Student
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "name": "Kalpana",
+  "email": "kalpana@gmail.com",
+  "village": "Chennai",
+  "score": 100
+}
+
+
+### Add Teacher
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "name": "Priya",
+  "email": "priya@gmail.com",
+  "subject": "Mathematics"
+}
+
+
+### Get Teachers
+GET http://localhost:8080/teachers
+
+
+### Add Quiz
+POST http://localhost:8080/quizzes
+Content-Type: application/json
+
+{
+  "subject": "Java",
+  "title": "Java Basics",
+  "totalMarks": 100
+}
+
+
+### Get All Quizzes
+GET http://localhost:8080/quizzes
+
+
+### Update Quiz
+PUT http://localhost:8080/quizzes/1
+Content-Type: application/json
+
+{
+  "subject": "Spring Boot",
+  "title": "Spring Boot Basics",
+  "totalMarks": 150
+}
+### Delete Quiz
+DELETE http://localhost:8080/quizzes/1
+### Add Question
+POST http://localhost:8080/questions
+Content-Type: application/json
+
+{
+  "questionText": "What is Java?",
+  "optionA": "Programming Language",
+  "optionB": "Database",
+  "optionC": "Operating System",
+  "optionD": "Browser",
+  "correctAnswer": "Programming Language",
+  "quizId": 1
+}
+### Get Questions
+GET http://localhost:8080/questions
+### Update Question
+PUT http://localhost:8080/questions/1
+Content-Type: application/json
+
+{
+  "questionText": "What is Spring Boot?",
+  "optionA": "Framework",
+  "optionB": "Database",
+  "optionC": "Programming Language",
+  "optionD": "Browser",
+  "correctAnswer": "Framework",
+  "quizId": 1
+}
+### Delete Question
+DELETE http://localhost:8080/questions/1
+### Add Score
+POST http://localhost:8080/scores
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "quizId": 1,
+  "marks": 90,
+  "totalMarks": 100
+}
+### Get Scores
+GET http://localhost:8080/scores

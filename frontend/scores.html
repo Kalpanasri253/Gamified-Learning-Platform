@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2>🎓 Gamified Learning Platform</h2>
+
+    <div class="menu">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="students.html">Students</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="questions.html">Questions</a>
+        <a href="scores.html">Scores</a>
+        <a href="index.html">Logout</a>
+    </div>
+</nav>
+
+<h1>Score Management</h1>
+
+<div class="container">
+
+<div class="card">
+
+<input type="hidden" id="id">
+
+<input type="number" id="studentId" placeholder="Student ID">
+
+<input type="number" id="quizId" placeholder="Quiz ID">
+
+<input type="number" id="marks" placeholder="Marks">
+
+<input type="number" id="totalMarks" placeholder="Total Marks">
+
+<br><br>
+
+<button onclick="saveScore()">💾 Save Score</button>
+
+<a href="dashboard.html">
+<button type="button">🏠 Dashboard</button>
+</a>
+
+</div>
+
+</div>
+
+<br>
+
+<center>
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Search Score..."
+onkeyup="searchScore()"
+style="width:350px;">
+
+</center>
+
+<br>
+
+<table id="scoreTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Student ID</th>
+<th>Quiz ID</th>
+<th>Marks</th>
+<th>Total Marks</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+<script src="js/scores.js"></script>
+
+</body>
+
+</html>
